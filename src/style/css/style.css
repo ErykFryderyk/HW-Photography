@@ -6,7 +6,7 @@
   padding: 0; }
 
 body {
-  background-color: lightgray; }
+  background-color: gray; }
 
 h1,
 h2,
@@ -19,10 +19,12 @@ h6 {
   color: #fff; }
 
 h1 {
-  font-size: 32px; }
+  font-size: 32px;
+  font-family: "Dancing Script", cursive; }
 
 h2 {
-  font-size: 34px; }
+  font-size: 34px;
+  font-family: "Poiret One", cursive; }
 
 ul li {
   list-style-type: none; }
@@ -34,7 +36,8 @@ p {
   font-size: 18px;
   color: #fff;
   letter-spacing: 1;
-  line-height: 2; }
+  line-height: 2;
+  font-family: "Poiret One", cursive; }
 
 img {
   max-width: 100%; }
@@ -60,3 +63,45 @@ img {
   @media only screen and (min-width: 1600px) {
     .container {
       width: 1560px; } }
+
+.square {
+  width: 150px;
+  height: 150px;
+  border: 2px solid black;
+  margin-left: 100px;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative; }
+  .square::before {
+    content: '';
+    position: absolute;
+    height: inherit;
+    width: inherit;
+    top: -2px;
+    left: -2px;
+    background-color: transparent;
+    border: 2px solid rgba(0, 0, 0, 0.7);
+    transform: rotate(-5deg);
+    z-index: -1; }
+  .square::after {
+    content: '';
+    position: absolute;
+    height: inherit;
+    background-color: transparent;
+    width: inherit;
+    top: -2px;
+    left: -2px;
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    transform: rotate(20px);
+    z-index: -2;
+    transform: rotate(-10deg); }
+
+/* HEADER */
+/* HERO */
+.hero-section {
+  background-color: #000;
+  height: 100vh;
+  width: 100%; }
