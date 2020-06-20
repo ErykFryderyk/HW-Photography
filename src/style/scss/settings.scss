@@ -1,0 +1,69 @@
+@import 'variables.scss';
+@import 'mixins.scss';
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: lightgray;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+    line-height: normal;
+    color: #fff;
+}
+h1{font-size: 32px;}
+h2{font-size: 34px;}
+
+ul li {list-style-type: none;}
+
+a {text-decoration: none;}
+
+p{
+    font-size: 18px;
+    color: #fff;
+    letter-spacing: 1;
+    line-height: 2;
+}
+
+img {max-width: 100%;}
+
+.container {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+
+
+    @include bp(phone) {
+        width: 550px;
+    }
+
+    @include bp(small) {
+        width: 750px;
+    }
+
+    @include bp(medium) {
+        width: 970px;
+    }
+
+    @include bp(desktop) {
+        width: 1170px;
+    }
+
+    @include bp(large) {
+        width: 1560px;
+    }
+}
