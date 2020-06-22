@@ -5,12 +5,153 @@
 
 
 /* HEADER */
-
+.header-section{
+        position: fixed;
+        z-index: 997;
+        width: 100%;
+}
+    
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+        
+    &__logo{
+        height: 50px;
+        width: 50px;
+    }
+}
 
 
 /* HERO */
 .hero-section{
-    background-color: #000;
     height: 100vh;
     width: 100%;
+    background: url('/src/img/IMG_0572.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    &::before{
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        bottom:0;
+        right: 0;
+        background: $black-opacity;
+        z-index: 0;
+    }
+}
+
+.hero{
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+
+    &__header{
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* ABOUT ME SECTION  */
+
+.about-section{
+    padding: 40px 0;
+    background: $primary-gradient;
+
+}
+
+.about{
+    display: flex;
+    flex-direction: column;
+
+    &__header{
+        padding-bottom: 20px;
+        display: flex;
+        justify-content: center;
+        position: relative;
+    }
+
+    &__content{
+        margin-left: auto;
+        margin-right: auto;
+
+        @include bp(small){
+            width: 500px;
+        }
+
+        @include bp(medium) {
+            width: 700px;
+        }
+        @include bp(desktop) {
+            width: 900px;
+        }
+    }
+
+    &__button{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 15%;
+            height: 1px;
+            background-color: $white-color;
+            top: 50%;
+            left: 0;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 15%;
+            height: 1px;
+            background-color: $white-color;
+            top: 50%;
+            right: 0;
+        }
+
+        &::before,
+        &::after {
+            @include bp(small) {
+                width: 30%;
+            }
+
+            @include bp(medium) {
+                width: 35%;
+            }
+
+            @include bp(desktop) {
+                width: 40%;
+            }
+
+            @include bp(large) {
+                width: 45%;
+            }
+        }
+    }
+}
+.divider{
+    display: flex;
+    justify-content: center;
+}
+
+/* PORTFOLIO SECTION  */
+
+.portfolio-section{
+    padding: 40px 0;
+    background-color: $white-color;
+}
+
+.portfolio{
+    
 }

@@ -9,7 +9,7 @@
     <link rel="shortcut icon" href="" type="image/x-icon">
 
     <!-- Font Awesome -->
-
+    <script src="https://kit.fontawesome.com/643726dbb6.js" crossorigin="anonymous"></script>
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;700&family=Poiret+One&family=Sulphur+Point:wght@300;400;700&display=swap" rel="stylesheet">
@@ -18,52 +18,83 @@
     <link rel="stylesheet" href="src/style/css/style.css">
 
 </head>
-<body>
+<body id="home">
      <!-- Header -->
-    <header>
+    <header class="header-section">
         <div class="container">
-            <div class="logo"></div>
-        </div>
-        <button class="hamburger"></button>
-        <nav class="nav-menu" style="display: none;">
-            <ul>
-                <li>Home</li>
-                <li>O mnie</li>
-                <li class="">Portfolio
+            <div class="header">
+                <div class="header__logo">
+                    <a href="#home">
+                        <img  class="" src="./src/img/hw-logo.png" alt="HW-logo">
+                    </a>
+                </div>
+                <button class="hamburger">
+                    <span class="hamburger__box">
+                        <span class="hamburger__inner"></span>
+                    </span>
+                </button>
+                <nav class="nav-menu" style="display: none;">
                     <ul>
-                        <li>Śluby</li>
-                        <li>Portrety</li>
-                        <li>Rodzinne</li>
+                        <li>Home</li>
+                        <li>O mnie</li>
+                        <li class="">Portfolio
+                            <ul>
+                                <li>Śluby</li>
+                                <li>Portrety</li>
+                                <li>Rodzinne</li>
+                            </ul>
+                        </li>
+                        <li>Contant</li>
                     </ul>
-                </li>
-                <li>Contant</li>
-            </ul>
-        </nav>
+                </nav>
+            </div>
+        </div>
     </header>
     <!--******-->
     <!-- HERO -->
     <!--******-->
     <section id="hero" class="hero-section">
-        <img class="hero-logo" src="" alt="">
-        <h1 class="hero-title">Creating Photography</h1>
-        <p class="hero-description">Lorem lpsum is simply dummy text of the printing and typesetting industry.</p>
-        <p class="hero-invide">Welcome to my site!</p>
-        <a href="">\/</a>
+        <div class="hero">
+            <div class="hero__logo">
+                <img class="hero__icon" src="./src/img/hw-logo.png" alt="HW-logo">
+            </div>
+            <div class="hero__header">
+                <h1 class="hero__title">Creating Photography</h1>
+                <p class="hero__description">Lorem lpsum is simply dummy text of the printing and typesetting industry.</p>
+            </div>
+            <div class="hero__invide">
+                <a href="">Welcome to my site!
+                    <span>
+                        <i class="fas fa-chevron-down"></i>
+                        <i class="fas fa-chevron-down"></i>
+                    </span>
+                </a>
+            </div>
+        </div>
     </section>
     <!--******-->
     <!-- ABOUT ME -->
     <!--******-->
     <section id="about" class="about-section">
-        <h2 class="title">Cześć wszystkim</h2>
-        <div class="about-content">
-            <p class="about-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima maxime sapiente molestiae cum, placeat fugiat aut voluptatem eligendi vel aliquid culpa corporis ab reiciendis consequuntur. Obcaecati similique delectus quidem itaque et totam hic veniam ipsum exercitationem, ipsam, autem molestiae omnis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, quae?</p>
+        <div class="container">
+            <div class="about">
+                <!-- <div class="about__header"> -->
+                    <h2 class="title title--with-lines">Cześć wszystkim</h2>
+                <!-- </div> -->
+                <div class="about__content">
+                    <p class="text text--align-center">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima maxime sapiente molestiae cum, placeat fugiat aut voluptatem eligendi vel aliquid culpa corporis ab reiciendis consequuntur. Obcaecati similique delectus quidem itaque et totam hic veniam ipsum exercitationem, ipsam, autem molestiae omnis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, quae?</p>
+                </div>
+                <div class="about__button">
+                    <a class="primary-btn">Więcej o mnie</a>
+                </div>
+            </div>
         </div>
-        <a class="btn">Więcej o mnie</a>
     </section>
     <!-- DIVIDER -->
     <div class="divider">
         <div class="square">
-            <p class="square__text">Najpiekniejszych chwil w zyciu nie zaplanujesz One przyjda same</p>
+            <p class="square__text square__text--margin-bottom">Najpiekniejszych chwil w zyciu nie zaplanujesz</p>
+            <p class="square__text">One przyjda same</p>
         </div>
     </div>
     <!--  -->
@@ -71,13 +102,35 @@
     <!-- PORTFOLIO-->
     <!--******-->
     <section id="portfolio" class="portfolio-section">
-        <h2 class="title">Portfolio</h2>
-        <div>
-            <img src="" alt="icon">
-            <h4>Śluby</h4>
-            <a href="">Zobacz</a>
+        <div class="container">
+            <div class="portfolio">
+                <h2 class="title title--black title--with-lines title--black-lines">Portfolio</h2>
+                <div class="portfolio__three-box">
+                    <div class="portfolio-box portfolio-box--wedding">
+                        <div class="portfolio-box__inner">
+                            <img class="portfolio-box__icon" src="/src/img/rings.png" alt="rings icon">
+                            <h4 class="portfolio-box__title">Śluby</h4>
+                            <a class="primary-btn" href="">Zobacz</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-box portfolio-box--portrait">
+                        <div class="portfolio-box__inner">
+                            <img class="portfolio-box__icon" src="/src/img/portrait.png" alt="portrait icon">
+                            <h4 class="portfolio-box__title">Portrety</h4>
+                            <a class="primary-btn" href="">Zobacz</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-box portfolio-box--family">
+                        <div class="portfolio-box__inner">
+                            <img class="portfolio-box__icon" src="/src/img/family.png" alt="family icon">
+                            <h4 class="portfolio-box__title">Rodzinne</h4>
+                            <a class="primary-btn" href="">Zobacz</a>
+                        </div>
+                    </div>
+                </div>
+                <p class="text text--black">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde accusantium beatae voluptatum eos similique adipisci velit. Quidem deleniti et rerum obcaecati nobis nulla soluta blanditiis possimus id. Saepe dolores aperiam harum tempore rem ullam excepturi magnam odit officiis placeat fugiat ea, nam doloribus voluptatibus ab provident ratione voluptas perferendis accusamus!</p>
+            </div>
         </div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde accusantium beatae voluptatum eos similique adipisci velit. Quidem deleniti et rerum obcaecati nobis nulla soluta blanditiis possimus id. Saepe dolores aperiam harum tempore rem ullam excepturi magnam odit officiis placeat fugiat ea, nam doloribus voluptatibus ab provident ratione voluptas perferendis accusamus!</p>
     </section>
     <!-- DIVIDER -->
     <div class="divider">
@@ -94,7 +147,7 @@
             <div class="contanct">
                 <div class="contact__inner">
                     <div class="contact__info">
-                        <h2>Kontakt</h2>
+                        <h2 class="title">Kontakt</h2>
                         <h3>Hubert Wleriańczyk</h3>
                         <div>
                             <img src="" alt="icon">
