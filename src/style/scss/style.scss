@@ -65,6 +65,13 @@
     padding: 40px 0;
     background: $primary-gradient;
 
+    @include bp(small){
+        padding: 50px 0;
+
+    }
+    @include bp(medium) {
+        padding: 60px 0;
+    }
 }
 
 .about{
@@ -79,19 +86,47 @@
     }
 
     &__content{
-        margin-left: auto;
-        margin-right: auto;
+        margin: 20px auto 20px auto;
+        position: relative;
 
         @include bp(small){
             width: 500px;
+
+            &::before {
+                content: '';
+                width: 60px;
+                height: 70px;
+                position: absolute;
+                top: 50%;
+                transform: translate(-150%, -50%);
+                background-color: transparent;
+                background-image: url('/src/img/ornament-icon-3.png');
+                background-size: contain;
+            }
+
+            &::after {
+                content: '';
+                width: 60px;
+                height: 70px;
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: scale(-1) translate(-150%, 50%);
+                background-color: transparent;
+                background-image: url('/src/img/ornament-icon-3.png');
+                background-size: contain;
+            }
         }
 
         @include bp(medium) {
             width: 700px;
+            margin: 30px auto 30px auto;
         }
         @include bp(desktop) {
             width: 900px;
         }
+
+        
     }
 
     &__button{
@@ -135,23 +170,112 @@
             }
 
             @include bp(large) {
-                width: 45%;
+                width: 40%;
             }
         }
     }
 }
 .divider{
+    background-color: $white-color;
+    padding: 40px 0;
     display: flex;
-    justify-content: center;
+    justify-content: center; 
+    position: relative;
+
+    @include bp(desktop){
+        padding: 60px 0 ;
+    }
+    @include bp(large) {
+        padding: 120px 0;
+    }
+
+    &__icon{
+        display: none;
+        width: 60px;
+        height: 60px;
+        position: absolute;
+        
+        @include bp(small){
+            display: block;
+        }
+
+        @include bp(desktop){
+            width: 80px;
+            height: 80px;
+        }
+
+        &--left{
+            top: 50%;
+            left: 25%;
+            transform: translate(-50%, -50%);
+        }
+        &--right {
+            top: 50%;
+            right: 25%;
+            transform: translate(50%, -50%);
+        }
+    }
+    &--background-image{
+        background: url('/src/img/divider-background.jpg') no-repeat;   
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center;
+    }
 }
 
 /* PORTFOLIO SECTION  */
 
 .portfolio-section{
     padding: 40px 0;
-    background-color: $white-color;
+    background-color: $light-gray-color;
+
+    @include bp(small) {
+        padding: 50px 0;
+
+    }
+
+    @include bp(medium) {
+        padding: 60px 0;
+    }
+
 }
 
 .portfolio{
     
+
+    &__three-box{
+        display: flex;
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        margin: 20px 0;
+
+        @include bp(medium){
+            flex-direction: row;
+            justify-content: space-around;
+            margin: 50px 0;
+
+            .portfolio-box{
+                margin: 0 20px;
+            }
+        }
+    }
 }
+
+/* CONTACT SECTION  */
+
+.contact-section{
+    background-color: $gray-color;
+}
+.contact{
+    // background-color: $white-color;
+    position: relative;
+
+    &__inner{
+        width: 100%;
+        background-color: $white-color;
+        position: absolute;
+        top: -50px;
+    }
+}
+
