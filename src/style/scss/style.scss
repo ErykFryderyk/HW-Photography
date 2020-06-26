@@ -9,6 +9,7 @@
         position: fixed;
         z-index: 997;
         width: 100%;
+        background-color: rgba($color: #fff, $alpha: .2);
 }
     
 .header{
@@ -17,8 +18,45 @@
     align-items: center;
         
     &__logo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
         height: 50px;
         width: 50px;
+    }
+}
+
+.nav-menu{
+    display: none; 
+
+    &__list{
+        display: flex;
+    }
+
+    &__item{
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__link{
+        letter-spacing: 2px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 5px;
+        margin: 0 5px;
+        
+        &:hover{
+            color: $black-color;
+            transition: color .5 linear;
+        }
+    }
+
+
+    @include bp(medium){
+        display: block;
     }
 }
 
@@ -44,7 +82,7 @@
 }
 
 .hero{
-    position: absolute;
+    position: relative;
     z-index: 1;
     width: 100%;
     height: 100%;
@@ -53,9 +91,38 @@
     align-items: center;
     flex-direction: column;
 
+    &__logo{
+        width: 300px;
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        height: auto;
+
+        @include bp(desktop){
+            width: 450px;
+        }
+        @include bp(large) {
+            width: 500px;
+        }
+    }
+
+    &__icon{
+        width: 100%;
+        opacity: 0.1;
+    }
+
     &__header{
         width: 100%;
+        height: 100%;
         text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__invide{
     }
 }
 
@@ -94,27 +161,28 @@
 
             &::before {
                 content: '';
-                width: 60px;
-                height: 70px;
+                width: 35px;
+                height: 30px;
                 position: absolute;
                 top: 50%;
+                left:0;
                 transform: translate(-150%, -50%);
                 background-color: transparent;
                 background-image: url('/src/img/ornament-icon-3.png');
-                background-size: contain;
+                background-size: cover;
             }
 
             &::after {
                 content: '';
-                width: 60px;
-                height: 70px;
+                width: 35px;
+                height: 30px;
                 position: absolute;
                 right: 0;
                 top: 50%;
-                transform: scale(-1) translate(-150%, 50%);
+                transform: translate(150%, -50%);
                 background-color: transparent;
-                background-image: url('/src/img/ornament-icon-3.png');
-                background-size: contain;
+                background-image: url('/src/img/ornament-icon-3-rotate.png');
+                background-size: cover;
             }
         }
 
@@ -220,6 +288,22 @@
         background-size: cover;
         background-attachment: fixed;
         background-position: center;
+        min-height: 300px;
+        position: relative;
+        
+        &::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: $black-opacity;
+        }
+
+        @include bp(desktop){
+            height:400px;
+        }
     }
 }
 
@@ -267,15 +351,139 @@
 .contact-section{
     background-color: $gray-color;
 }
+
 .contact{
-    // background-color: $white-color;
-    position: relative;
+    width: 100%;
 
     &__inner{
         width: 100%;
         background-color: $white-color;
-        position: absolute;
+        position: relative;
         top: -50px;
+
+        @include bp(medium){
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+        }
+    }
+    
+    &__content{
+        padding: 20px 20px;
+        
+    }
+    
+    &__title{
+        color: $black-color;
+        text-align: center;
+        margin-bottom: 20px;
+        
+    }
+    
+    &__info{
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    &__icon{
+        width: 40px;
+        font-size: 30px;
+        text-align: center;
+    }
+
+    &__text{
+        color: $black-color;
+        margin-left: 10px;
+
+    }
+
+    &__link{
+        color: $black-color;
+        font-size: 18px;
+        margin-left: 10px;
+    }
+
+    &__google-map{
+       height:400px;
     }
 }
 
+.social-media{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    &__square{
+        width: 40px;
+        height: 40px;
+        border: 1px solid black;
+        background-color: transparent;
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        position: relative;
+        margin: 0 10px;
+        color: $black-color;
+        
+
+        &::before {
+            content: '';
+            position: absolute;
+            height: inherit;
+            width: inherit;
+            top: -1px;
+            left: -1px;
+            background-color: transparent;
+            border: 1px solid rgba($color: #000000, $alpha: .5);
+            transform: rotate(-7deg);
+            transition: transform .3s linear;
+
+            @include bp(desktop) {
+                transform: rotate(-10deg);
+                 &:hover {
+                     transform: rotate(10deg);
+                 }
+            }
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            height: inherit;
+            background-color: transparent;
+            width: inherit;
+            top: -1px;
+            left: -1px;
+            border: 1px solid rgba($color: #000000, $alpha: .2);
+            transform: rotate(-14deg);
+            transition: transform .3s linear;
+
+            @include bp(desktop) {
+                transform: rotate(-20deg);
+
+                &:hover{
+                    transform: rotate(20deg);
+                }
+            }
+        }
+
+        
+
+        &:hover {
+            background-color: red;
+            &::before {
+                transform: rotate(7deg);
+            }
+
+            &::after {
+                transform: rotate(14deg);
+            }
+        }
+    }
+}
+
+footer{
+    background-color: $black-color;
+}

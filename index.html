@@ -13,6 +13,7 @@
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;700&family=Poiret+One&family=Sulphur+Point:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sofia&display=swap" rel="stylesheet">
 
     <!-- File Style Sheet -->
     <link rel="stylesheet" href="src/style/css/style.css">
@@ -33,18 +34,18 @@
                         <span class="hamburger__inner"></span>
                     </span>
                 </button>
-                <nav class="nav-menu" style="display: none;">
-                    <ul>
-                        <li>Home</li>
-                        <li>O mnie</li>
-                        <li class="">Portfolio
-                            <ul>
+                <nav class="nav-menu">
+                    <ul class="nav-menu__list">
+                        <li class="nav-menu__item"><a class="nav-menu__link" href="#">Home</a></li>
+                        <li class="nav-menu__item"><a class="nav-menu__link" href="#about">O mnie</a></li>
+                        <li class="nav-menu__item"><a class="nav-menu__link" href="#portfolio">Portfolio</a>
+                            <ul style="display: none;">
                                 <li>Śluby</li>
                                 <li>Portrety</li>
                                 <li>Rodzinne</li>
                             </ul>
                         </li>
-                        <li>Contant</li>
+                        <li class="nav-menu__item"><a class="nav-menu__link" href="#contact">Kontakt</a></li>
                     </ul>
                 </nav>
             </div>
@@ -63,7 +64,8 @@
                 <p class="hero__description">Lorem lpsum is simply dummy text of the printing and typesetting industry.</p>
             </div>
             <div class="hero__invide">
-                <a href="">Welcome to my site!
+                <a class="" href="">
+                    <span>Welcome to my site!</span>
                     <span>
                         <i class="fas fa-chevron-down"></i>
                         <i class="fas fa-chevron-down"></i>
@@ -82,10 +84,11 @@
                     <h2 class="title title--with-lines">Cześć wszystkim</h2>
                 <!-- </div> -->
                 <div class="about__content">
+                    <h3 class="about">Jestem Hubert</h3>
                     <p class="text text--align-center">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima maxime sapiente molestiae cum, placeat fugiat aut voluptatem eligendi vel aliquid culpa corporis ab reiciendis consequuntur. Obcaecati similique delectus quidem itaque et totam hic veniam ipsum exercitationem, ipsam, autem molestiae omnis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, quae?</p>
                 </div>
                 <div class="about__button">
-                    <a class="primary-btn">Więcej o mnie</a>
+                    <a class="primary-btn" src="/src/about.html">Więcej o mnie</a>
                 </div>
             </div>
         </div>
@@ -139,9 +142,11 @@
     </section>
     <!-- DIVIDER -->
     <div class="divider divider--background-image">
-        <!-- <div class="triangle"> -->
-            <p class="square__text">Najpiekniejszych chwil w zyciu nie zaplanujesz One przyjda same</p>
-        <!-- </div> -->
+        <div class="triangle">
+            <img class="triangle__icon triangle__icon--right" src="/src/img/ornament-icon-4.png" alt="ornament-icon">
+            <p class="triangle__text">Keep Calm <br> and <br> Take <br> Photo</p>
+            <img class="triangle__icon triangle__icon--left" src="/src/img/ornament-icon-4-rotate.png" alt="ornament-icon">
+        </div>
     </div>
     <!--  -->
     <!--******-->
@@ -151,31 +156,36 @@
         <div class="container">
             <div class="contact">
                 <div class="contact__inner">
-                    <div class="contact__info">
+                    <div class="contact__content">
                         <h2 class="title title--black">Kontakt</h2>
-                        <h3>Hubert Wleriańczyk</h3>
-                        <div>
-                            <img src="" alt="icon">
-                            <p></p>
-                            <p></p>
+                        <h3 class="contact__title">Hubert Wleriańczyk</h3>
+                        <div class="contact__info">
+                            <i class="contact__icon fas fa-map-marker-alt"></i>
+                            <div class="">
+                                <p class="contact__text">ul. Klasztorna 12</p>
+                                <p class="contact__text">62-521 Tychy</p>
+                            </div>
                         </div>
-                        <div>
-                            <img src="" alt="icon">
-                            <p>+48 698 000 400</p>
+                        <div class="contact__info">
+                            <i class="contact__icon fas fa-mobile-alt"></i>
+                            <p class="contact__text">+48 698 000 400</p>
                         </div>
-                        <div>
-                            <img src="" alt="icon">
-                            <p>Hubert Wleriańczyk</p>
+                        <div class="contact__info">
+                            <i class="contact__icon far fa-envelope"></i>
+                            <a class="contact__link"href="mailto:grzeniu00987@o2.pl">djhubertusdjtomas@o2.pl</a>
+                        </div>
+                        <div class="social-media">
+                            <a class="social-media__square" href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a class="social-media__square" href="#"><i class="fab fa-instagram"></i></a>
+                            <a class="social-media__square" href="#"><i class="fab fa-twitter"></i></a>
+                            <a class="social-media__square" href="#"><i class="fab fa-youtube"></i></a>
                         </div>
                     </div>
-                    <div class="google-map">
-                        <!-- MAP GOOGLE -->
-                    </div>
-                    <div class="social-media">
-                        <a href="">FB</a>
-                        <a href="">IN</a>
-                        <a href="">TW</a>
-                        <a href="">YT</a>
+                    <div class="contact__content">
+                        <p class="text text--black text--align-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, dolorum voluptate. Temporibus est cumque autem.</p>
+                        <div class="google-map">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d81850.18113527936!2d18.938289424329568!3d50.127124537233!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4716c7e202408281%3A0xda564472a0b326a1!2sTychy!5e0!3m2!1spl!2spl!4v1593076960290!5m2!1spl!2spl"  width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                        </div>
                     </div>
                 </div>
             </div>
