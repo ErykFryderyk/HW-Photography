@@ -1,5 +1,6 @@
 const hamburger = document.querySelector('.hamburger');
 const mobile = document.querySelector('.mobile-menu');
+const mobileMenuLinks = document.querySelectorAll('.mobile-menu__link');
 const main = () => prepareDOMEvents();
 
 const prepareDOMEvents = () =>{
@@ -21,6 +22,12 @@ const mobileMenu = () => {
     }
 }
 
+
+for(let link of mobileMenuLinks){
+    link.addEventListener('click', function(){
+        toggleHamburger();
+    })
+}
 
 
 

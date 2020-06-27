@@ -36,7 +36,7 @@
         position: absolute;
         left: 0;
         top: 50%;
-        transition: background-color .1s  ease-in;
+        transition: background-color .1s ease-in;
 
 
         &::before,
@@ -47,11 +47,12 @@
             background-color: white;
             position: absolute;
             left: 0;
-            transition: transform .2s .1s ease-in-out;
+            transition: transform .2s ease-in-out;
         }
 
         &::before {
             top: -10px;
+            
         }
 
         &::after {
@@ -400,6 +401,7 @@
     z-index: 900;
     display: flex;
     align-items: center;
+    transition: transform 0.3s ease-in-out;
 
     &--active{
         transform: translateY(100%);

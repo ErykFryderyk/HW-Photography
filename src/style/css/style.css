@@ -106,7 +106,7 @@ img {
     position: absolute;
     left: 0;
     top: 50%;
-    transition: background-color .1s  ease-in; }
+    transition: background-color .1s ease-in; }
     .hamburger__inner::before, .hamburger__inner::after {
       content: '';
       width: 100%;
@@ -114,7 +114,7 @@ img {
       background-color: white;
       position: absolute;
       left: 0;
-      transition: transform .2s .1s ease-in-out; }
+      transition: transform .2s ease-in-out; }
     .hamburger__inner::before {
       top: -10px; }
     .hamburger__inner::after {
@@ -376,7 +376,8 @@ img {
   min-height: 100vh;
   z-index: 900;
   display: flex;
-  align-items: center; }
+  align-items: center;
+  transition: transform 0.3s ease-in-out; }
   .mobile-menu--active {
     transform: translateY(100%); }
   @media only screen and (min-width: 992px) {
