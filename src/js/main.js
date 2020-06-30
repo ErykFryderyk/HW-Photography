@@ -1,10 +1,15 @@
 const hamburger = document.querySelector('.hamburger');
 const mobile = document.querySelector('.mobile-menu');
 const mobileMenuLinks = document.querySelectorAll('.mobile-menu__link');
+const headerSection = document.querySelector('.header-section');
+const backToTop =   document.querySelector('.back-to-top');
+
+
 const main = () => prepareDOMEvents();
 
 const prepareDOMEvents = () =>{
     hamburger.addEventListener('click', toggleHamburger);
+    window.addEventListener('scroll', scrollBackground);
 }
 
 
@@ -29,6 +34,20 @@ for(let link of mobileMenuLinks){
     })
 }
 
+
+const scrollBackground = () =>{
+    const hero = document.querySelector('.hero-section');
+    const top = hero.getBoundingClientRect().top;
+
+    if(top <= '-300'){
+        headerSection.classList.add('header-section--scroll');
+        backToTop.classList.add('back-to-top--active');
+        
+    }else{
+        headerSection.classList.remove('header-section--scroll');
+        backToTop.classList.remove('back-to-top--active');
+    }
+}
 
 
 
