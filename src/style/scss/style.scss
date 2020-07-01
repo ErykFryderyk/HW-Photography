@@ -114,7 +114,7 @@
 .hero-section{
     height: 100vh;
     width: 100%;
-    background: url('/src/img/camera-mountains-outdoors-person.jpg') no-repeat;
+    background: url('/src/img/man-wearing-jacket-standing-on-wooden-docks-leading-to-body.jpg') no-repeat;
     background-size: cover;
     background-position: center;
 
@@ -130,24 +130,25 @@
     }
 }
 
-.hero-section-weddings{
-    height: 100vh;
-    width: 100%;
+.hero-section--weddings{
     background: url('/src/img/IMG_0572.jpg') no-repeat;
     background-size: cover;
     background-position: center;
-
-    &::before {
-        position: absolute;
-        content: '';
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        background: $black-opacity;
-        z-index: 0;
-    }
 }
+
+.hero-section--family {
+    background: url('/src/img/person-holding-baby.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-section--portrait {
+    background: url('/src/img/woman-in-black-tank-top.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
 
 .hero{
     position: relative;
@@ -617,7 +618,62 @@
         }
     }
 }
+.gallery-section{
+        padding: 40px 0;
+        background-color: $gray-color;
+
+        @include bp(small) {
+            padding: 50px 0;
+
+        }
+
+        @include bp(medium) {
+            padding: 60px 0;
+        }
+
+        @include bp(medium) {
+            padding: 100px 0;
+        }
+    }
+.gallery{
+    margin: 100px 15px 0 15px;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-auto-rows: 250px 150px;
+    grid-auto-flow: dense;
+
+    &__item {
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease-in-out,
+                filter 0.3s ease-in-out;
+
+        }
+
+        img:hover {
+            transform: scale(1.05);
+            filter: brightness(0.6);
+        }
+
+        @media (min-width: 580px) {
+            &:first-child {
+                grid-area: 1 / 1 / span 2 / span 2;
+            }
+
+            &:nth-child(3n) {
+                grid-column: span 2;
+            }
+        }
+    }
+}
 
 footer{
-    background-color: $black-color;
+    background-color: $green-color;
+    text-align: center;
+    padding: 20px 0;
 }
