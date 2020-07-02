@@ -140,7 +140,7 @@
     height: 150px;
     display: flex;
     justify-content: center;
-    background-image: url('/src/img/triangle2.png');
+    background-image: url('../../img/triangle2.png');
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
@@ -157,7 +157,7 @@
         left: 0;
         width: inherit;
         height: inherit;
-        background-image: url('/src/img/triangle2.png');
+        background-image: url('../../img/triangle2.png');
         background-repeat: no-repeat;
         background-size: cover;
         transform: rotate(5deg);
@@ -174,7 +174,7 @@
         left: 0;
         width: inherit;
         height: inherit;
-        background-image: url('/src/img/triangle2.png');
+        background-image: url('../..//img/triangle2.png');
         background-repeat: no-repeat;
         background-size: cover;
         transform: rotate(10deg);
@@ -397,18 +397,18 @@
     }
 
     &--wedding{
-        background: url('/src/img/wedding-background.jpg') no-repeat;
+        background: url('../../img/wedding-background.jpg') no-repeat;
         background-position: center;
         background-size: cover;
     }
 
     &--portrait{
-        background: url('/src/img/portrait-background.jpg') no-repeat;
+        background: url('../..//img/portrait-background.jpg') no-repeat;
         background-position: center;
         background-size: cover;
     }
     &--family {
-        background: url('/src/img/family-background.jpg') no-repeat;
+        background: url('../../img/family-background.jpg') no-repeat;
         background-position: center;
         background-size: cover;
     }

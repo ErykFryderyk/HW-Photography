@@ -187,7 +187,7 @@ img {
   height: 150px;
   display: flex;
   justify-content: center;
-  background-image: url("/src/img/triangle2.png");
+  background-image: url("../../img/triangle2.png");
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
@@ -202,7 +202,7 @@ img {
     left: 0;
     width: inherit;
     height: inherit;
-    background-image: url("/src/img/triangle2.png");
+    background-image: url("../../img/triangle2.png");
     background-repeat: no-repeat;
     background-size: cover;
     transform: rotate(5deg);
@@ -217,7 +217,7 @@ img {
     left: 0;
     width: inherit;
     height: inherit;
-    background-image: url("/src/img/triangle2.png");
+    background-image: url("../..//img/triangle2.png");
     background-repeat: no-repeat;
     background-size: cover;
     transform: rotate(10deg);
@@ -373,15 +373,15 @@ img {
     margin-bottom: 20px;
     text-transform: capitalize; }
   .portfolio-box--wedding {
-    background: url("/src/img/wedding-background.jpg") no-repeat;
+    background: url("../../img/wedding-background.jpg") no-repeat;
     background-position: center;
     background-size: cover; }
   .portfolio-box--portrait {
-    background: url("/src/img/portrait-background.jpg") no-repeat;
+    background: url("../..//img/portrait-background.jpg") no-repeat;
     background-position: center;
     background-size: cover; }
   .portfolio-box--family {
-    background: url("/src/img/family-background.jpg") no-repeat;
+    background: url("../../img/family-background.jpg") no-repeat;
     background-position: center;
     background-size: cover; }
 
@@ -627,7 +627,7 @@ img {
 .hero-section {
   height: 100vh;
   width: 100%;
-  background: url("/src/img/man-wearing-jacket-standing-on-wooden-docks-leading-to-body.jpg") no-repeat;
+  background: url("../../img/man-wearing-jacket-standing-on-wooden-docks-leading-to-body.jpg") no-repeat;
   background-size: cover;
   background-position: center; }
   .hero-section::before {
@@ -641,17 +641,17 @@ img {
     z-index: 0; }
 
 .hero-section--weddings {
-  background: url("/src/img/IMG_0572.jpg") no-repeat;
+  background: url("../../img/IMG_0572.jpg") no-repeat;
   background-size: cover;
   background-position: center; }
 
 .hero-section--family {
-  background: url("/src/img/person-holding-baby.jpg") no-repeat;
+  background: url("../../img/person-holding-baby.jpg") no-repeat;
   background-size: cover;
   background-position: center; }
 
 .hero-section--portrait {
-  background: url("/src/img/woman-in-black-tank-top.jpg") no-repeat;
+  background: url("../../img/woman-in-black-tank-top.jpg") no-repeat;
   background-size: cover;
   background-position: center; }
 
@@ -760,7 +760,7 @@ img {
           left: 0;
           transform: translate(-150%, -100%);
           background-color: transparent;
-          background-image: url("/src/img/ornament-icon-3.png");
+          background-image: url("../../img/ornament-icon-3.png");
           background-size: cover; }
         .about__content::after {
           content: '';
@@ -771,7 +771,7 @@ img {
           top: 50%;
           transform: translate(150%, -100%);
           background-color: transparent;
-          background-image: url("/src/img/ornament-icon-3-rotate.png");
+          background-image: url("../../img/ornament-icon-3-rotate.png");
           background-size: cover; } }
     @media only screen and (min-width: 992px) {
       .about__content {
@@ -847,7 +847,7 @@ img {
       right: 25%;
       transform: translate(50%, -50%); }
   .divider--background-image {
-    background: url("/src/img/divider-background.jpg") no-repeat;
+    background: url("../../img/divider-background.jpg") no-repeat;
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
