@@ -15,6 +15,7 @@
         align-items: center;
         padding: 0 15px;
         text-align: center;
+        margin-bottom: 50px;
         
 
         @include bp(medium){
@@ -23,6 +24,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            margin-bottom: 0;
         }
     }
 
@@ -31,9 +33,10 @@
     }
 
     &__text{
-
+        margin-bottom: 30px;
         @include bp(medium){
             font-size: 18px;
+            margin-bottom: 40px;
         }
     }
 
@@ -53,6 +56,7 @@
 
     &__primary-pic{
         width: 100%;
+        z-index: 1;
 
         @include bp(small){
             width:300px;
@@ -68,6 +72,7 @@
     &__second-pic{
         display: none;
         filter: grayscale(100%);
+        z-index: 1;
 
         @include bp(medium){
             display: block;
@@ -84,8 +89,6 @@
             display: block;
             grid-column: 1/5;
             grid-row: 4/6;
-            z-index: 1;
-
         }
     }
 }

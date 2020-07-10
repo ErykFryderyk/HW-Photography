@@ -251,15 +251,11 @@
             }
 
             @include bp(medium) {
-                width: 35%;
+                width: 30%;
             }
 
             @include bp(desktop) {
-                width: 40%;
-            }
-
-            @include bp(large) {
-                width: 40%;
+                width: 30%;
             }
         }
     }

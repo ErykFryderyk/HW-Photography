@@ -264,6 +264,7 @@
 .about{
     display: flex;
     flex-direction: column;
+    justify-content: center;
 
     &__title{
         padding-bottom: 20px;
@@ -274,36 +275,6 @@
     &__content{
         margin: 20px auto 20px auto;
         position: relative;
-
-        @include bp(small){
-            width: 500px;
-
-            &::before {
-                content: '';
-                width: 35px;
-                height: 30px;
-                position: absolute;
-                top: 50%;
-                left:0;
-                transform: translate(-150%, -100%);
-                background-color: transparent;
-                background-image: url('../../img/ornament-icon-3.png');
-                background-size: cover;
-            }
-
-            &::after {
-                content: '';
-                width: 35px;
-                height: 30px;
-                position: absolute;
-                right: 0;
-                top: 50%;
-                transform: translate(150%, -100%);
-                background-color: transparent;
-                background-image: url('../../img/ornament-icon-3-rotate.png');
-                background-size: cover;
-            }
-        }
 
         @include bp(medium) {
             width: 700px;
@@ -346,18 +317,6 @@
         &::after {
             @include bp(small) {
                 width: 30%;
-            }
-
-            @include bp(medium) {
-                width: 35%;
-            }
-
-            @include bp(desktop) {
-                width: 40%;
-            }
-
-            @include bp(large) {
-                width: 40%;
             }
         }
     }
