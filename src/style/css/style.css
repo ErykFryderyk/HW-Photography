@@ -405,11 +405,13 @@ img {
     flex-direction: column; }
   .mobile-menu__item {
     width: 100%;
-    height: 50px;
+    height: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 10px; }
+    .mobile-menu__item--point {
+      height: 25px; }
   .mobile-menu__link {
     width: 150px;
     height: 100%;
@@ -420,6 +422,8 @@ img {
     .mobile-menu__link:hover {
       color: #000;
       background-color: #8B9281; }
+    .mobile-menu__link--is-children {
+      font-size: 16px; }
 
 .back-to-top {
   position: fixed;
