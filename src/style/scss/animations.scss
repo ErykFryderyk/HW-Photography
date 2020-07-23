@@ -63,3 +63,84 @@
         transform: rotate(0%);
     }
 }
+
+
+@keyframes fade-in-top{
+    from{
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-top{
+    animation-name: fade-in-top;
+    animation-duration: .8s;
+    animation-timing-function: cubic-bezier(0, 0.8, 0.74, 1);
+}
+
+@keyframes fade-in-down {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-down{
+    animation-name: fade-in-down;
+    animation-duration: .5s;
+    animation-timing-function: cubic-bezier(0, 0.8, 0.74, 1);
+
+}
+
+@keyframes fade-in{
+    from{
+        opacity:0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+.animate-fade-in{
+    animation-name: fade-in;
+    animation-duration: 1s;    ;
+}
+
+@keyframes animation-right{
+    from{
+        transform: translateX(100%);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+.animate-right{
+    animation-name: animation-right;
+    animation-duration: 1s;
+    position: relative;
+}
+
+@keyframes animation-left{
+    from{
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.animate-left{
+    animation-name: animation-left;
+    animation-duration: .5s;
+}
