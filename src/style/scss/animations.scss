@@ -112,7 +112,8 @@
 
 .animate-fade-in{
     animation-name: fade-in;
-    animation-duration: 1s;    ;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
 }
 
 @keyframes animation-right{
@@ -125,8 +126,8 @@
 }
 .animate-right{
     animation-name: animation-right;
-    animation-duration: 1s;
-    position: relative;
+    animation-duration: 1s; 
+    animation-fill-mode: forwards;
 }
 
 @keyframes animation-left{
@@ -136,11 +137,16 @@
     }
     to{
         opacity: 1;
-        transform: translateX(0);
+        transform: translateX(0%);
     }
 }
 
 .animate-left{
     animation-name: animation-left;
     animation-duration: .5s;
+    animation-fill-mode: forwards;
+}
+
+.scroll-appear{
+    opacity: 0;
 }

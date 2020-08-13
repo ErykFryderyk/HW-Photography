@@ -3,13 +3,16 @@ const mobile = document.querySelector('.mobile-menu');
 const mobileMenuLinks = document.querySelectorAll('.mobile-menu__link');
 const headerSection = document.querySelector('.header-section');
 const backToTop =   document.querySelector('.back-to-top');
+const browserScreenPosition = window.innerHeight - 300;
+const heightWindowTop = '-300';
+const animationElements = document.querySelectorAll('.scroll-appear');
 
 
 const main = () => prepareDOMEvents();
 
 const prepareDOMEvents = () =>{
     hamburger.addEventListener('click', toggleHamburger);
-    window.addEventListener('scroll', scrollBackground);
+    window.addEventListener('scroll', scrollFunctions);
 }
 
 
@@ -35,11 +38,11 @@ for(let link of mobileMenuLinks){
 }
 
 
-const scrollBackground = () =>{
+const changeBackground = () =>{
     const hero = document.querySelector('.hero-section');
     const top = hero.getBoundingClientRect().top;
 
-    if(top <= '-300'){
+    if(top <= heightWindowTop){
         headerSection.classList.add('header-section--scroll');
         backToTop.classList.add('back-to-top--active');
         
@@ -49,8 +52,19 @@ const scrollBackground = () =>{
     }
 }
 
+const scrollAppear = () => {
 
+    animationElements.forEach(element => {
+        if(element.getBoundingClientRect().top < browserScreenPosition){
+            element.classList.add('animate-left');
+        }
+    })
+}
+    
 
-
+const scrollFunctions = () => {
+    changeBackground();
+    scrollAppear();
+}
 
 window.addEventListener('DOMContentLoaded', main);
